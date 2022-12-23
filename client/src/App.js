@@ -1,19 +1,39 @@
 import './App.scss';
 import axios from "axios"
-import { useEffect } from 'react';
+import { useState } from 'react';
 
 function App() {
 
-  useEffect(()=>{
+  const [listOfAnime, setListOfAnime] = useState([])
+  const [background, setBackground] = useState(true)
 
-  }, [])
+  const handleSubmit = (e)=>{
+    setBackground(false)
+    e.preventDefault()
+    axios.get("http://localhost:3999/anime").then((response)=>{
+      setListOfAnime(response.data)
+    })
+  }
 
   return (
     <div className="App">
-      <img src="assets/background.gif" alt=""/>
+      <div className="anime">
+        {listOfAnime.map((value, key) => {
+          return <div className="animeEntry">
+            <div className="left">
+              <h3>{value.title}</h3>
+              rating: {value.rating}/10
+            </div>
+            <div className="right">
+              <img src={value.img} alt=""/>
+            </div>
+          </div>;
+        })}
+      </div>
+      {background && <img src="assets/background.gif" alt=""/>}
       <h1>Omar's Entertainmentopedia</h1>
       <div className='searchBar'>
-        <form>
+        <form onSubmit={handleSubmit}>
           <input type="search" placeholder="Search"/>
           <button type="search">
             <img src="assets/search.svg" alt=""/>
