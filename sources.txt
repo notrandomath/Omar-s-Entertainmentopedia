@@ -1,2 +1,14 @@
+Code:
 https://www.youtube.com/playlist?list=PLpPqplz6dKxUaZ630TY1BFIo5nP-_x-nL
-- modified some of the backend code
+- used as a reference for my code, the tutorial was more social-media oriented
+https://www.youtube.com/watch?v=7WwtzsSHdpI
+- used as a reference for some frontend stuff
+
+Assets:
+https://pixabay.com/vectors/plus-addition-computer-calculate-1727487/
+- plus sign graphic
+https://www.motionelements.com/stock-image-19329886-fire-line-triangle-loop?query_id=solr_1e9042093ca842f19ef7dd9f065e5e1b&position=5&sku=19329886-12988430-gif
+- background gif
+https://pixabay.com/vectors/magnifying-glass-seek-search-bar-1976105/
+- search icon
+
