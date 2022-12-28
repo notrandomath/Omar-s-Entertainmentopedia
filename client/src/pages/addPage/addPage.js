@@ -1,5 +1,6 @@
 import "./addPage.scss"
 import SearchResults from "../../components/searchResults/searchResults";
+import StarRating from '../../components/starRating/starRating';
 import axios from "axios"
 import { useState } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
@@ -19,7 +20,7 @@ function AddPage() {
 
   const validationSchema = Yup.object().shape({
       title: Yup.string().required("You must input a title"),
-      rating: Yup.number("You must input an integer").integer("You must input an integer").min(0).max(10).required("You must input an integer"),
+      rating: Yup.number().integer().min(0).max(10).required("You must select a star rating"),
       img: Yup.string().required("You must input a valid image link")
   })
 
@@ -40,11 +41,8 @@ function AddPage() {
                   placeholder="Title"
               />
               <ErrorMessage name="title" component="span"/>
-              <Field 
-                  id="fieldEntry"
-                  name="rating"
-                  placeholder="Rating"
-              />
+              Rating:
+              <Field id="fieldEntry" placeholder="Rating" name="rating" as={StarRating}/>
               <ErrorMessage name="rating" component="span"/>
               <Field 
                   id="fieldEntry"

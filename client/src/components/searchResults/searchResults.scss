@@ -1,38 +1,55 @@
 .searchResults{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    background-color: 	rgb(122, 82, 122);
+    border: 1em;
+    border-radius: 1em;
+    border-color:	rgb(82, 0, 102);
+
     .anime{
         display: flex;
         flex-direction: column;
         align-items: center;
 
         .animeEntry{
-        margin-bottom: 20px;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        align-items: center;
+            border-radius: 0.5em;
+            margin: 10px 10px 10px 10px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            align-items: center;
 
-        width: 50%;
-        height: 100px;
-        border-radius: 2em;
-        background-color: teal;
-        color: white;
+            &:hover{
+                transform: scale(1.1);
+            }
 
-        .left{
-            width: 60%;
-            h3{
-            font-weight: 200;
-            padding-left: 10px;
+            width: 85%;
+            height: auto;
+            background-color: rgb(170, 89, 166);
+            color: white;
+
+            .left{
+                margin: 10px 0px 10px 0px;
+                width: 60%;
+                background-color: rgb(170, 89, 186);
+                h3{
+                font-weight: 200;
+                padding-left: 10px;
+                }
             }
-        }
-        .right{
-            width: 40%;
-            margin-left: auto;
-            img{
-            width: auto;
-            height: 80px;
-            padding-right: 10px;
+            .right{
+                margin: 10px 0px 10px 0px;
+                width: 40%;
+                margin-left: auto;
+                background-color: rgb(160, 89, 176);
+                img{
+                width: auto;
+                height: 80px;
+                padding-right: 10px;
+                }
             }
-        }
         }
     }
 }

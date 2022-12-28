@@ -1,4 +1,14 @@
 .introPage{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    
+    img{
+        width: 50%;
+        height: auto;
+        align-self: center;
+    }
+
     h1{
         color: white;
         font-size: 50px;
@@ -34,11 +44,12 @@
     }
     .addButton{
         button{
-            background-color: darkcyan;
+            background-color: rgb(163, 0, 204);
             margin-top: 50px;
             width: 20%;
             height: 50px;
             border-radius: 2em;
+            border-color: rgb(223, 207, 227);
             cursor: pointer;
         }
         img{

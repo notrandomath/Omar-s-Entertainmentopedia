@@ -2,7 +2,9 @@ Code:
 https://www.youtube.com/playlist?list=PLpPqplz6dKxUaZ630TY1BFIo5nP-_x-nL
 - used as a reference for my code, the tutorial was more social-media oriented
 https://www.youtube.com/watch?v=7WwtzsSHdpI
-- used as a reference for some frontend stuff
+- used as a reference for some frontend code
+https://www.youtube.com/watch?v=eDw46GYAIDQ
+- used as a reference for star rating system
 
 Assets:
 https://pixabay.com/vectors/plus-addition-computer-calculate-1727487/

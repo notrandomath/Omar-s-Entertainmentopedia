@@ -14,25 +14,29 @@
         border-style: solid;
         border-color: rgb(102, 0, 128);
 
-        ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-            color: rgb(135, 115, 140);
-            opacity: 1; /* Firefox */
-          }
-          
-          :-ms-input-placeholder { /* Internet Explorer 10-11 */
-            color: rgb(135, 115, 140);
-          }
-          
-          ::-ms-input-placeholder { /* Microsoft Edge */
-            color: rgb(135, 115, 140);
-          }
+        
 
         #fieldEntry{
             margin: 10px 10px 0px 10px;
             color:	rgb(82, 0, 102);
             background-color: rgb(250, 230, 255);
+            border-color: rgb(163, 0, 204);
             border-radius: 0.5em;
             font-size: 24px;
+
+            //Code Source: https://www.w3schools.com/howto/howto_css_placeholder.asp
+            ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+                color: rgb(185, 115, 140);
+                opacity: 1; /* Firefox */
+            }
+            
+            :-ms-input-placeholder { /* Internet Explorer 10-11 */
+                color: rgb(185, 115, 140);
+            }
+            
+            ::-ms-input-placeholder { /* Microsoft Edge */
+                color: rgb(185, 115, 140);
+            }
         }
 
         span{
@@ -71,7 +75,10 @@
         }
     }
     .sampleResult{
-        align-self: stretch;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
     }
     
 }
