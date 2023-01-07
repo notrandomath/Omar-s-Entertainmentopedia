@@ -18,6 +18,6 @@ module.exports = {
       "password": process.env.DB_PASSWORD,
       "database": "omars_entertainmentopedia_db",
       "host": process.env.DB_HOST,
-      "dialect": mysql
+      "dialect": "mysql"
     }
 }
