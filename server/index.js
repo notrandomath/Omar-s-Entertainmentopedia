@@ -4,7 +4,9 @@ const port = process.env.PORT || 3999;
 const cors = require("cors");
 
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+    origin: ['https://main.d25xsqer2j1mdj.amplifyapp.com', 'http://localhost:3000']
+}));
 
 const db = require('./models');
 
