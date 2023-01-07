@@ -26,7 +26,7 @@ function AddPage() {
 
   const handleSubmit = (data) =>{
     console.log(data)
-    axios.post(`http://localhost:3999/anime`, data).then((response)=>{
+    axios.post(`http://node-express-env.eba-e37qvgpp.us-west-1.elasticbeanstalk.com/anime`, data).then((response)=>{
       setListOfAnime([response.data])
     })
   }
