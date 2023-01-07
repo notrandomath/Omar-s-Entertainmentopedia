@@ -12,7 +12,6 @@ const db = require('./models');
 const animeRouter = require('./routes/Anime');
 app.use("/anime", animeRouter);
 
-
 db.sequelize.sync().then(()=>{
     app.listen(port, () => {
         console.log(`Server running on port ${port}`);
