@@ -5,7 +5,7 @@ const cors = require("cors");
 
 app.use(express.json());
 app.use(cors({
-    origin: ['https://main.d25xsqer2j1mdj.amplifyapp.com', 'http://localhost:3000']
+    origin: ['https://www.omars-entertainmentopedia.yahia.space', 'https://omars-entertainmentopedia.yahia.space', 'http://localhost:3000']
 }));
 
 const db = require('./models');
