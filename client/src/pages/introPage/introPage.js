@@ -21,7 +21,7 @@ export default function IntroPage() {
     const handleSubmit = (data)=>{
       setBackground(false)
       console.log(data)
-      axios.get(`http://node-express-env.eba-e37qvgpp.us-west-1.elasticbeanstalk.com/anime/${data.search}`).then((response)=>{
+      axios.get(`https://omars-entertainmentopedia-backend.yahia.space/anime/${data.search}`).then((response)=>{
         setListOfAnime(response.data)
       })
     }
