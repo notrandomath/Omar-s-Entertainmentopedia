@@ -12,6 +12,10 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: false
         },
+        link: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
     })
 
     return Anime

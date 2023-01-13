@@ -15,13 +15,15 @@ function AddPage() {
   const initialValues = {
     "title": "",
     "rating": "",
-    "img": ""
+    "img": "",
+    "link": "",
   }
 
   const validationSchema = Yup.object().shape({
       title: Yup.string().required("You must input a title"),
       rating: Yup.number().integer().min(0).max(10).required("You must select a star rating"),
-      img: Yup.string().required("You must input a valid image link")
+      img: Yup.string().required("You must input a valid image link"),
+      link: Yup.string().required("please input a valid link to a website with more info"),
   })
 
   const handleSubmit = (data) =>{
@@ -50,6 +52,11 @@ function AddPage() {
                   placeholder="Image"
               />
               <ErrorMessage name="img" component="span"/>
+              <Field 
+                  id="fieldEntry"
+                  name="link"
+                  placeholder="Link"
+              />
               <button type="submit">
                   <img src="assets/add.svg" alt=""/>
               </button>
