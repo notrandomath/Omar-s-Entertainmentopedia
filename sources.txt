@@ -5,6 +5,10 @@ https://www.youtube.com/watch?v=7WwtzsSHdpI
 - used as a reference for some frontend code
 https://www.youtube.com/watch?v=eDw46GYAIDQ
 - used as a reference for star rating system
+https://stackoverflow.com/questions/13391579/how-to-rename-json-key
+- used to rename json from Jikan
+https://stackoverflow.com/questions/8837454/sort-array-of-objects-by-single-key-with-date-value
+- sorting algorithm
 
 Assets:
 https://pixabay.com/vectors/plus-addition-computer-calculate-1727487/

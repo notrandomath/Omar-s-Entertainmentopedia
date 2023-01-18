@@ -1,60 +1,35 @@
-.introPage{
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    
-    img{
-        width: 50%;
-        height: auto;
-        align-self: center;
-    }
+.introPage {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
 
-    h1{
-        color: white;
-        font-size: 50px;
-        font-weight: 200;
-    }
+  img {
+    width: 50%;
+    height: auto;
+    align-self: center;
+  }
 
-    .searchBar{
-        position: relative;
-        #searchInput{
-            left: 25%;
-            width: 50%;
-            height: 45px;
-            border-radius: 2em;
-            padding-left: 55px;
-        }
-        button{
-            position: absolute;
-            width: 50px;
-            height: 50px;
-            left: 22.5%;
-            top: 0%;
-            border-radius: 2em;
-            cursor: pointer;
-            
-            img{
-                width: 25px;
-                height: 25px;
-            }
-        }
+  h1 {
+    color: white;
+    font-size: 50px;
+    font-weight: 200;
+  }
+  span {
+    color: red;
+  }
+  .addButton {
+    button {
+      background-color: rgb(163, 0, 204);
+      margin-top: 50px;
+      width: 20%;
+      height: 50px;
+      border-radius: 2em;
+      border-color: rgb(223, 207, 227);
+      cursor: pointer;
     }
-    span{
-        color:red;
+    img {
+      width: 25px;
+      height: 25px;
     }
-    .addButton{
-        button{
-            background-color: rgb(163, 0, 204);
-            margin-top: 50px;
-            width: 20%;
-            height: 50px;
-            border-radius: 2em;
-            border-color: rgb(223, 207, 227);
-            cursor: pointer;
-        }
-        img{
-            width: 25px;
-            height: 25px;
-        }
-    }
+  }
 }
