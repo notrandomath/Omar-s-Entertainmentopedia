@@ -49,7 +49,7 @@ function AddPageExtended() {
         validationSchema={validationSchema}
       >
         <Form className="createForm">
-          <Field id="fieldEntry" name="title" placeholder="Title" value={!!(malEntry) ? malEntry.title : ""}/>
+          <Field id="fieldEntry" name="title" placeholder="Title" type="text" defaultValue={!!(malEntry) ? malEntry.title : ""}/>
           <ErrorMessage name="title" component="span"/>
           Rating:
           <Field
@@ -57,12 +57,12 @@ function AddPageExtended() {
             placeholder="Rating"
             name="rating"
             as={StarRating}
-            value={Math.round(!!(malEntry) ? malEntry.rating : "")}
+            defaultValue={Math.round(!!(malEntry) ? malEntry.rating : "")}
           />
           <ErrorMessage name="rating" component="span"/>
-          <Field id="fieldEntry" name="img" placeholder="Image" value={!!(malEntry) ? malEntry.img : ""}/>
+          <Field id="fieldEntry" name="img" placeholder="Image" defaultValue={!!(malEntry) ? malEntry.img : ""}/>
           <ErrorMessage name="img" component="span" />
-          <Field id="fieldEntry" name="link" placeholder="Link" value={!!(malEntry) ? malEntry.link : ""}/>
+          <Field id="fieldEntry" name="link" placeholder="Link" defaultValue={!!(malEntry) ? malEntry.link : ""}/>
           <ErrorMessage name="link" component="span"/>
           <button type="submit">
             <img src="assets/add.svg" alt="" />
