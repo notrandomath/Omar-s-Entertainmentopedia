@@ -1,12 +1,33 @@
 import "./searchBar.scss";
+import {
+  TextField,
+  InputAdornment,
+  IconButton,
+} from "@mui/material";
+import Search from "@mui/icons-material/Search";
 
 const SearchBar = ({ field, value, ...props }) => {
   return (
     <div className="searchBar">
-      <input name="searchBar" {...field} {...props} />
-      <button type="submit">
-        <img src="assets/search.svg" alt="" />
-      </button>
+      <TextField
+        label="Search"
+        {...field}
+        {...props}
+        InputProps={{
+          startAdornment: (
+            <InputAdornment position="start">
+              <IconButton>
+                <Search style={{ color: 'white' }}/>
+              </IconButton>
+            </InputAdornment>
+          ),
+          disableUnderline: true,
+          className: "input",
+        }}
+        InputLabelProps={{
+          className: "label",
+        }}
+      />
     </div>
   );
 };
