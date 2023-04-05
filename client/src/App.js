@@ -34,7 +34,7 @@ function App() {
         <Router>
           <Routes>
             <Route path="/" exact element={<IntroPage />} />
-            <Route path="/login" exact element={<LoginPage />} />
+            <Route path="/login" exact element={<LoginPage/>} />
             <Route path="/add" exact element={<AddPage />} />
             <Route path="/add-extended" exact element={<AddPageExtended />} />
           </Routes>

@@ -1,6 +1,64 @@
-.introPage {
+@import "../../../global.scss";
+
+.loginPage {
     display: flex;
     flex-direction: column;
-    align-items: stretch;
+    align-items: center;
+
+    @include themify($themes) {
+        color: themed(alternateTextColor);
+    }
+
+    .loginForm{
+        width: 500px;
+        color: white;
+        border-top: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 2em;
+        background-color: rgb(150, 89, 166);
+        border-style: solid;
+        border-color: rgb(102, 0, 128);
+
+        #fieldEntryContainer{
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+
+        #fieldEntry {
+            color: rgb(82, 0, 102);
+            background-color: rgb(250, 230, 255);
+            font-size: 24px;
+
+            //Code Source: https://www.w3schools.com/howto/howto_css_placeholder.asp
+            ::placeholder {
+                /* Chrome, Firefox, Opera, Safari 10.1+ */
+                color: rgb(185, 115, 140);
+                opacity: 1; /* Firefox */
+            }
+
+            :-ms-input-placeholder {
+                /* Internet Explorer 10-11 */
+                color: rgb(185, 115, 140);
+            }
+
+            ::-ms-input-placeholder {
+                /* Microsoft Edge */
+                color: rgb(185, 115, 140);
+            }
+        }
+
+        button {
+            height: 50px;
+            border-radius: 1em;
+            margin: 10px 10px 10px 10px;
+            background-color: rgb(163, 0, 204);
+        }
+
+        span{
+            color: rgb(120, 0, 0);
+        }
+    }
 }
   

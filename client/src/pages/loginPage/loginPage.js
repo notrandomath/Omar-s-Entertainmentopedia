@@ -2,44 +2,44 @@ import "./loginPage.scss";
 import axios from "axios";
 import { useState } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
+import { TextField, Button } from "@mui/material";
 import * as Yup from "yup";
 
 export default function LoginPage() {
   const initialValues = {
-    search: "",
+    username: "",
+    password: "",
   };
 
   const validationSchema = Yup.object().shape({
-    search: Yup.string().required("You must input a search string"),
+    username: Yup.string().required("You must input a username"),
+    password: Yup.string().required("You must input a password"),
   });
 
   const handleSubmit = (data) => {
-    
+    console.log("happened");
   };
 
   return (
     <div className="loginPage">
-      <h1>Login</h1>
+      <h1>Please login to continue</h1>
       <Formik
         initialValues={initialValues}
         onSubmit={handleSubmit}
         validationSchema={validationSchema}
       >
-        <Form>
-          <div className="searchBar">
-            <Field id="username" name="username" placeholder="Search"/>
-            <Field id="password" name="password" placeholder="Search"/>
+        <Form className="loginForm">
+          <div id="fieldEntryContainer">
+            <Field id="fieldEntry" name="username" placeholder="Username" as={TextField}/>
           </div>
-          <ErrorMessage name="search" component="span" />
+          <ErrorMessage name="username" component="span"/>
+          <div id="fieldEntryContainer">
+            <Field id="fieldEntry" name="password" placeholder="Password" as={TextField}/>
+          </div>
+          <ErrorMessage name="password" component="span"/>
+          <Button type="submit" variant="contained">Login</Button>
         </Form>
       </Formik>
-      <div className="addButton">
-        <form action="/add">
-          <button>
-            <img src="assets/add.svg" alt="" />
-          </button>
-        </form>
-      </div>
     </div>
   );
 }
