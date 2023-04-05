@@ -1,16 +1,20 @@
+@import "../../../global.scss";
+
 .addPage {
   display: flex;
   flex-direction: column;
   align-items: stretch;
   width: 100%;
+  
+  @include themify($themes) {
+    color: themed(alternateTextColor);
+  }
 
   h1 {
-    color: rgb(223, 207, 227);
     font-size: 40px;
     font-weight: 200;
   }
   h3 {
-    color: rgb(223, 207, 227);
     font-size: 20px;
     font-weight: 400;
   }

@@ -76,7 +76,7 @@ export default function AddPage() {
           </button>
         </form>
       </div>
-      <h3>Sample Reults (if successful):</h3>:
+      <h3>Sample Reults (if successful):</h3>
       <SearchResults
         listOfAnime={listOfAnime}
         toAdd={true}

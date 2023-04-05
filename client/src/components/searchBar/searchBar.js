@@ -17,7 +17,7 @@ const SearchBar = ({ field, value, ...props }) => {
           startAdornment: (
             <InputAdornment position="start">
               <IconButton>
-                <Search style={{ color: 'white' }}/>
+                <Search className="searchIcon"/>
               </IconButton>
             </InputAdornment>
           ),

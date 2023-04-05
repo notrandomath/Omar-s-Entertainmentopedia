@@ -2,11 +2,15 @@
 $themes: (
   light: (
     backgroundColor: white,
+    searchBarColor: white,
     textColor: black,
+    alternateTextColor: rgb(119, 0, 149),
   ),
   dark: (
     backgroundColor: black,
+    searchBarColor: rgb(43, 43, 43),
     textColor: white,
+    alternateTextColor: rgb(223, 207, 227),
   ),
 );
 

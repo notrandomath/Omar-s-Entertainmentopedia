@@ -5,4 +5,12 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  .darkModeButton {
+    margin-top: 10px;
+    background-color: rgb(163, 0, 204);
+  }
+  .darkModeButton:hover {
+    margin-top: 10px;
+    background-color: rgb(119, 0, 149);
+  }
 }

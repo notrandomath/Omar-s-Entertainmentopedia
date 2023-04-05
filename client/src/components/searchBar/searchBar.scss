@@ -1,21 +1,27 @@
+@import "../../../global.scss";
+
 .searchBar {
   position: relative;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  
   .MuiTextField-root{
-    background-color: rgb(43, 43, 43);
-    border-color: white;
-    color: white;
     width: 75%;
     border-radius: 50px; 
-    .input{
-      color: white;
+    @include themify($themes) {
+      background-color: themed(searchBarColor);
+      border-color: themed(textColor);
+      color: themed(textColor);
+      .input{
+        color: themed(textColor);
+      }
+      .label{
+        color: themed(textColor);
+      } 
+      .searchIcon{
+        color: themed(textColor);
+      }
     }
-    .label{
-      color: white;
-    } 
   }
 }
