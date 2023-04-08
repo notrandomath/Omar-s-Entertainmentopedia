@@ -8,7 +8,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@mui/material";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import LightModeIcon from "@mui/icons-material/LightMode";
-import { joinPaths } from "@remix-run/router";
+import { AuthProvider, RequireAuth } from "react-auth-kit";
 
 function App() {
   // fetches darkmode from storage if it exists otherwise it's null
@@ -31,14 +31,29 @@ function App() {
   return (
     <div className="app">
       <div className={`theme-${darkMode ? "dark" : "light"}`}>
-        <Router>
-          <Routes>
-            <Route path="/" exact element={<IntroPage />} />
-            <Route path="/login" exact element={<LoginPage/>} />
-            <Route path="/add" exact element={<AddPage />} />
-            <Route path="/add-extended" exact element={<AddPageExtended />} />
-          </Routes>
-        </Router>
+        <AuthProvider
+          authType={"cookie"}
+          authName={"_auth"}
+          cookieDomain={window.location.hostname}
+          cookieSecure={true}
+        >
+          <Router>
+            <Routes>
+              <Route path="/" exact element={<IntroPage />} />
+              <Route path="/login" exact element={<LoginPage/>} />
+              <Route path="/add" exact element={
+                <RequireAuth loginPath={"/login"}>
+                  <AddPage />
+                </RequireAuth>
+              } />
+              <Route path="/add-extended" exact element={
+                <RequireAuth loginPath={"/login"}>
+                  <AddPageExtended/>
+                </RequireAuth>
+              } />
+            </Routes>
+          </Router>
+        </AuthProvider>
         <Button
           variant="contained"
           endIcon={darkMode ? <LightModeIcon /> : <DarkModeIcon />}
