@@ -9,7 +9,6 @@ app.use(
     origin: [
       "https://www.omars-entertainmentopedia.yahia.space",
       "https://omars-entertainmentopedia.yahia.space",
-      "http://localhost:3000",
     ],
   })
 );
