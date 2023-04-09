@@ -3,12 +3,16 @@ import SearchResults from "../../components/searchResults/searchResults";
 import SearchBar from "../../components/searchBar/searchBar";
 import axios from "axios";
 import { useState } from "react";
+import { useSignOut, useAuthUser } from "react-auth-kit";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import { Button } from "@mui/material";
 
 export default function IntroPage() {
   const [listOfAnime, setListOfAnime] = useState([]);
   const [background, setBackground] = useState(true);
+  const signOut = useSignOut();
+  const auth = useAuthUser()
 
   const initialValues = {
     search: "",
@@ -38,7 +42,6 @@ export default function IntroPage() {
       />
       {background && <img src="assets/background.gif" alt="" />}
       <h1>Omar's Entertainmentopedia</h1>
-
       <Formik
         initialValues={initialValues}
         onSubmit={handleSubmit}
@@ -57,6 +60,10 @@ export default function IntroPage() {
             <img src="assets/add.svg" alt="" />
           </button>
         </form>
+      </div>
+      <div className="signInDetails">
+        {auth() === null ? "Currently not logged in" : `Currently logged in as: ${auth().username}`}
+        <Button variant="contained" className="signOutButton" onClick={() => signOut()}>Sign Out</Button>
       </div>
     </div>
   );

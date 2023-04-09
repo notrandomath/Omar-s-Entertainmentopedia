@@ -2,15 +2,17 @@ import "./loginPage.scss";
 import { useState } from "react";
 import UserPool from "./UserPool";
 import { useSignIn } from "react-auth-kit";
+import { useNavigate } from "react-router-dom";
 import { CognitoUser, AuthenticationDetails } from "amazon-cognito-identity-js";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { TextField, Button } from "@mui/material";
 import * as Yup from "yup";
-import { FaBatteryQuarter } from "react-icons/fa";
 
 export default function LoginPage() {
   const [errorMessage, setErrorMessage] = useState("")
   const signIn = useSignIn();
+  const navigate = useNavigate();
+  
 
   const initialValues = {
     username: "",
@@ -35,13 +37,14 @@ export default function LoginPage() {
 
     user.authenticateUser(authDetails, {
       onSuccess: (response) => {
-        console.log("OnSuccess: ", response);
+        console.log(response);
         signIn({
           token: response.getAccessToken().getJwtToken(),
           expiresIn: 3600,
           tokenType: "Bearer",
           authState: { username: data.username }
         });
+        navigate("/add");
       },
       onFailure: (err) => {
         console.error("On Failure: ", err);
