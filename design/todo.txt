@@ -1,8 +1,0 @@
-To Do:
--	Smoother transitions for search results / hover effects / star rating
--	Fix authentication TTL
--	Add button for  sign-in page
--	Create auto complete search
--	Advanced search function
--	Change icon for website
--	Create other tables for games/movies

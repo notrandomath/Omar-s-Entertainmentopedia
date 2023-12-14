@@ -5,14 +5,12 @@ import axios from "axios";
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
 import { Formik, Form, Field, ErrorMessage } from "formik";
-import { useAuthHeader } from 'react-auth-kit'
 import * as Yup from "yup";
 
 function AddPageExtended() {
   const [listOfAnime, setListOfAnime] = useState([]);
   const { state } = useLocation();
   const { malEntry } = !!(state) ? state : {};
-  const getAuthHeader = useAuthHeader();
 
   const initialValues = {
     title: !!(malEntry) ? malEntry.title : "",
@@ -36,10 +34,8 @@ function AddPageExtended() {
 
   const handleSubmit = (data) => {
     console.log(data);
-    const headers = {'Authorization': getAuthHeader()}
-    console.log(data);
     axios
-      .post(`https://omars-entertainmentopedia-backend.yahia.space/anime`, data, {headers: headers})
+      .post(`https://omars-entertainmentopedia-backend.yahia.space/anime`, data)
       .then((response) => {
         setListOfAnime([response.data]);
       });
